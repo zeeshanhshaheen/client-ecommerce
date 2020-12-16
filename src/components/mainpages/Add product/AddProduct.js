@@ -159,7 +159,7 @@ function AddProduct() {
             name="description"
             placeholder="Please enter description"
             value={product.description}
-            rows="4"
+           
             onChange={handleChangeInput}
           />
         </div>
@@ -173,7 +173,7 @@ function AddProduct() {
             name="content"
             placeholder="Please enter content"
             value={product.content}
-            rows="3"
+            
             onChange={handleChangeInput}
           />
         </div>
