@@ -159,7 +159,7 @@ function AddProduct() {
             name="description"
             placeholder="Please enter description"
             value={product.description}
-            rows="3"
+            rows="4"
             onChange={handleChangeInput}
           />
         </div>
