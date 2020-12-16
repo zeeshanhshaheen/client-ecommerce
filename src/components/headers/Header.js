@@ -11,7 +11,7 @@ const Header = () => {
   const [cart] = state.userApi.cart;
 
   const logoutUser = async () => {
-    await axios.get("/user/logout");
+    await axios.get("https://big-mern.herokuapp.com/user/logout");
     localStorage.clear();
     setIsAdmin(false);
     setIsLogged(false);
@@ -21,7 +21,7 @@ const Header = () => {
     return (
       <Fragment>
         <li>
-          <Link to="/create_product" className="nav-item nav-link">
+          <Link to="https://big-mern.herokuapp.com/create_product" className="nav-item nav-link">
             Create Product
           </Link>
         </li>

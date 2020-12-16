@@ -7,7 +7,7 @@ function CategoriesAPi() {
 
   useEffect(() => {
     const getCategories = async () => {
-      const res = await axios.get("/api/category");
+      const res = await axios.get("https://big-mern.herokuapp.com/api/category");
       setCategories(res.data);
     };
 

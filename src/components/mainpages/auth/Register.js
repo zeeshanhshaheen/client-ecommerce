@@ -17,7 +17,7 @@ const Register = () => {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/user/register", { ...user });
+      await axios.post("https://big-mern.herokuapp.com/user/register", { ...user });
       localStorage.setItem("login", true);
       window.location.href = "/";
     } catch (err) {

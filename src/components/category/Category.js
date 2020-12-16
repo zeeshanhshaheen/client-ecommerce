@@ -16,7 +16,7 @@ const Category = () => {
     try {
       if (onEdit) {
         const res = await axios.put(
-          `/api/category/${id}`,
+          `https://big-mern.herokuapp.com/api/category/${id}`,
           { name: category },
           {
             headers: { Authorization: token },
@@ -25,7 +25,7 @@ const Category = () => {
         alert(res.data.msg);
       } else {
         const res = await axios.post(
-          "/api/category",
+          "https://big-mern.herokuapp.com/api/category",
           { name: category },
           {
             headers: { Authorization: token },
@@ -49,7 +49,7 @@ const Category = () => {
 
   const deleteCategory = async (id) => {
     try {
-      const res = await axios.delete(`/api/category/${id}`, {
+      const res = await axios.delete(`https://big-mern.herokuapp.com/api/category/${id}`, {
         headers: { Authorization: token },
       });
       alert(res.data.msg);

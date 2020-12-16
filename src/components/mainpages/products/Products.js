@@ -14,13 +14,13 @@ function Products() {
     try {
       setLoading(true);
       const destroyImg = axios.post(
-        "/api/destroy",
+        "https://big-mern.herokuapp.com/api/destroy",
         { public_id },
         {
           headers: { Authorization: token },
         }
       );
-      const deleteProduct = axios.delete(`/api/products/${id}`, {
+      const deleteProduct = axios.delete(`https://big-mern.herokuapp.com/api/products/${id}`, {
         headers: { Authorization: token },
       });
 

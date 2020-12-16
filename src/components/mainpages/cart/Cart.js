@@ -23,7 +23,7 @@ const Cart = () => {
 
   const addToCart = async (cart) => {
     await axios.patch(
-      "/user/addcart",
+      "https://big-mern.herokuapp.com/user/addcart",
       { cart },
       {
         headers: { Authorization: token },

@@ -16,7 +16,7 @@ const Login = () => {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/user/login", { ...user });
+      await axios.post("https://big-mern.herokuapp.com/user/login", { ...user });
       localStorage.setItem("login", true);
       window.location.href = "/";
     } catch (err) {

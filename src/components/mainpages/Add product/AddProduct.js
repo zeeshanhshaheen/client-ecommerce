@@ -60,7 +60,7 @@ function AddProduct() {
       let formData = new FormData();
       formData.append("file", file);
 
-      const res = await axios.post("/api/upload", formData, {
+      const res = await axios.post("https://big-mern.herokuapp.com/api/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: token,
@@ -87,7 +87,7 @@ function AddProduct() {
 
       if (onEdit) {
         await axios.put(
-          `/api/products/${product._id}`,
+          `https://big-mern.herokuapp.com/api/products/${product._id}`,
           { ...product, images },
           {
             headers: { Authorization: token },
@@ -96,7 +96,7 @@ function AddProduct() {
         history.push("/");
       } else {
         await axios.post(
-          "/api/products",
+          "https://big-mern.herokuapp.com/api/products",
           { ...product, images },
           {
             headers: { Authorization: token },

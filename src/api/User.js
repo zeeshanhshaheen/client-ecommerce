@@ -10,7 +10,7 @@ function UserAPi(token) {
     if (token) {
       const getUser = async () => {
         try {
-          const res = await axios.get("/user/info", {
+          const res = await axios.get("https://big-mern.herokuapp.com/user/info", {
             headers: { Authorization: token },
           });
 
