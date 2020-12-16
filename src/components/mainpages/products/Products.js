@@ -27,6 +27,7 @@ function Products() {
       await destroyImg;
       await deleteProduct;
       setLoading(false);
+      loading(false);
       alert("Product Deleted..");
     } catch (err) {
       alert(err.response.data.msg);

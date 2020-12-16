@@ -1,7 +1,7 @@
-import React, { Fragment, useContext, useState } from "react";
+import React, {useContext } from "react";
 import { Link } from "react-router-dom";
 import { StateHandler } from "../../../StateHandler";
-import axios from "axios";
+
 
 function ProductItem({ product, isAdmin, deleteProduct }) {
   const state = useContext(StateHandler);
